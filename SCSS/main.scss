@@ -28,6 +28,16 @@ p {
     margin: 0 auto;
 }
 
+.split {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    &>* {
+        flex-basis: 30%;
+        min-width: 15em;
+    }
+}
+
 .btn {
     display: inline-block;
     text-decoration: none;
@@ -38,4 +48,8 @@ p {
     padding: .5em 1.25em;
     background: blue;
     border-radius: .25em;
+}
+
+.featured__items {
+    color: red;
 }
