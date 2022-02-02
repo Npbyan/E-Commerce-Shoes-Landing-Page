@@ -90,7 +90,7 @@
             text-align: center;
             font-size: clamp(2.5rem, calc(5vw + 1rem), 4rem);
             line-height: 1;
-            color: darkblue;
+            color: #132b31;
             margin-bottom: 5rem;
         }
         
@@ -99,7 +99,7 @@
             text-align: center;
             padding: 15em 0;
             /* background: #222 */
-            background-image: url(../img/shoe-3.png), radial-gradient(#444, #111);
+            background-image: url(../img/shoe-3.png), radial-gradient(rgb(177, 174, 174), #2193b0);
             background-blend-mode: multiply;
             background-attachment: fixed;
             background-repeat: no-repeat;
@@ -157,14 +157,38 @@
         }
         
         .product__title {
-            font-size: 4rem;
-            line-height: 1.1;
+            font-size: clamp(3rem, calc(5vw + 1rem), 5.5rem);
+            text-transform: uppercase;
+            line-height: 1;
             color: #fff;
             text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2);
         }
         
         .product__image {
             margin: -5em 0 0 0;
+        }
+        
+        @media (min-width: 45em) {
+            .product__image {
+                float: right;
+                width: 65%;
+                /* outline: 2px solid red; */
+                shape-outside: url(..img/shoe-1.png);
+                shape-margin: 1em;
+            }
+            .product {
+                text-align: left;
+                margin-bottom: 9em;
+            }
+            .product__title {
+                margin: 0;
+            }
+            .product.shoe-left .product__image {
+                float: left;
+                shape-outside: url(../img/shoe-2.png);
+                margin: 0 0 0 -5em;
+                shape-margin: 2em;
+            }
         }
         
         .hero {
@@ -174,10 +198,10 @@
         .shoe-red {
             --clr-inner: red;
             --clr-outer: orange;
-            --clr-accent: limegreen;
+            --clr-accent: rgb(214, 50, 50);
         }
         
-        .shoe-white {
+        .shoe-left {
             --clr-inner: blue;
             --clr-outer: rgb(0, 255, 34);
             --clr-accent: limegreen;
@@ -186,5 +210,5 @@
         .shoe-blue {
             --clr-inner: gold;
             --clr-outer: rgb(212, 0, 255);
-            --clr-accent: limegreen;
+            --clr-accent: rgb(243, 182, 191);
         }
